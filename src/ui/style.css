@@ -1,0 +1,67 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.navigationContainer ul{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    align-items:center;
+    list-style: none;
+}
+
+.navigationContainer{
+  background-color: #9f86c0;
+  color:#f2e9e4;
+  padding:0.5rem;
+}
+
+.mainContent{
+    display:grid;
+    grid-template-columns: 0.2fr 1fr;
+}
+
+.sidebarContainer{
+  padding-top:2rem;
+  background-color: #231942;
+  padding-left:1rem;
+  color:#e0b1cb;
+  border-radius: 0.1rem;
+  height:100vh;
+}
+.sidebarContainer ul{
+  list-style: none;
+}
+
+.projectContainer{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #5e548e;
+  color:#be95c4;
+  justify-content: center;
+  gap:50px;
+  }
+
+.card{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:2rem;
+}
+
+
+@font-face {
+    font-family: "MyFont";
+    src: local("MyFont"),
+      url("../assets/myFont.otf") format("opentype");
+  }
+
+    .navigationContainer{
+    font-family: 'MyFont';
+    font-weight: 800;
+    font-style: normal;
+  }
+  .navigationContainer ul li:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    cursor: grab;
+  }
