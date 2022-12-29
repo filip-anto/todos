@@ -4,6 +4,10 @@ module.exports = {
   entry: {
     index: './src/index.js'
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -26,5 +30,8 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };

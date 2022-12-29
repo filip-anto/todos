@@ -16,5 +16,23 @@ export default function sidebarCreation() {
     sidebarCreateProject.innerHTML = "Create Project";
     sidebarNavigation.appendChild(sidebarCreateProject);
     
+
     return (sidebarContainer);
 }
+function sidebarToggle() {
+    console.log (document.getElementsByClassName("sidebarContainer")[0].style.width==='');
+    if (document.getElementsByClassName("sidebarContainer")[0].style.width===''){
+        document.getElementsByClassName("sidebarContainer")[0].style.width = "10%";     
+    }else 
+    if (document.getElementsByClassName("sidebarContainer")[0].style.width !=="0px") {
+        document.getElementsByClassName("sidebarContainer")[0].style.width = "0px";
+        document.getElementsByClassName("sidebarNavigation")[0].style.visibility = "hidden";
+    } else {
+        document.getElementsByClassName("sidebarContainer")[0].style.width = "10%";
+        document.getElementsByClassName("sidebarNavigation")[0].style.visibility = "visible";
+    }
+
+}
+
+
+export { sidebarToggle }
