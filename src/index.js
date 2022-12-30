@@ -22,3 +22,9 @@ addSampleProjects();
 loadProjects();
 document.getElementsByTagName("body")[0].appendChild(createNewProject());
 document.getElementsByClassName("createProjectButton")[0].addEventListener("click",()=> document.getElementsByClassName("modal")[0].style.display = "block");
+document.getElementsByClassName("closeButton")[0].addEventListener("click",()=>document.getElementsByClassName("modal")[0].style.display = "none");
+window.onclick = function(event) {
+  if (event.target == document.getElementsByClassName("modal")[0]) {
+    document.getElementsByClassName("modal")[0].style.display = "none"
+  }
+}
