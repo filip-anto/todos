@@ -2,6 +2,7 @@
 
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">Open Modal</button>*/
+import datepicker from 'js-datepicker';
 export default function createNewProject() {
   let modal = document.createElement("div");
   modal.classList.add("modal");
@@ -65,13 +66,18 @@ export default function createNewProject() {
   startingDateLabel.htmlFor = "startingDateLabel";
   startingDateLabel.innerHTML = "Enter the starting date!";
   inputSection.appendChild(startingDateLabel);
+
+
   let startingDateInput = document.createElement("input");
-  startingDateInput.type = "date";
-  startingDateInput.min = "1-1-2023";
   startingDateInput.id = "startingDateInput";
-  startingDateInput.name = "startingDateInput";
   inputSection.appendChild(startingDateInput);
 
+
+  let endingDateInput = document.createElement("input");
+  endingDateInput.id = "endingDateInput";
+  inputSection.appendChild(endingDateInput);
+
+  /*inputSection.appendChild(picker);*/
 
   /*
   // Get the modal
@@ -93,3 +99,10 @@ export default function createNewProject() {
   }*/
   return (modal);
 }
+
+function projectDatePicker(){
+
+  const startPicker = datepicker('#startingDateInput', { id: 1 });
+  const endPicker = datepicker('#endingDateInput', { id: 1 });
+}
+export {newStartDatePicker};

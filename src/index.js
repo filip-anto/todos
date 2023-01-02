@@ -1,11 +1,12 @@
 import { compareAsc, format } from 'date-fns'
+import '../node_modules/js-datepicker/dist/datepicker.min.css';
 import './ui/style.css';
 import createNavBar from './ui/navBar';
 import addProject, { addSampleProjects, loadProjects } from './logic/projectManagement';
 import createProject from './ui/project';
 import createProjectContainer from './ui/projectContainer';
 import sidebarCreation from './ui/sidebar';
-import createNewProject from './ui/createNewProject'
+import createNewProject, { newStartDatePicker } from './ui/createNewProject'
 const dates = [
   new Date(1995, 6, 2),
   new Date(1987, 1, 11),
@@ -21,9 +22,10 @@ createProjectContainer();
 addSampleProjects();
 loadProjects();
 document.getElementsByTagName("body")[0].appendChild(createNewProject());
-document.getElementsByClassName("createProjectButton")[0].addEventListener("click",()=> document.getElementsByClassName("modal")[0].style.display = "block");
-document.getElementsByClassName("closeButton")[0].addEventListener("click",()=>document.getElementsByClassName("modal")[0].style.display = "none");
-window.onclick = function(event) {
+projectDatePicker();
+document.getElementsByClassName("createProjectButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "block");
+document.getElementsByClassName("closeButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "none");
+window.onclick = function (event) {
   if (event.target == document.getElementsByClassName("modal")[0]) {
     document.getElementsByClassName("modal")[0].style.display = "none"
   }
