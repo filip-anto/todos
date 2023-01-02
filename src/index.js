@@ -6,7 +6,7 @@ import addProject, { addSampleProjects, loadProjects } from './logic/projectMana
 import createProject from './ui/project';
 import createProjectContainer from './ui/projectContainer';
 import sidebarCreation from './ui/sidebar';
-import createNewProject, { newStartDatePicker } from './ui/createNewProject'
+import createNewProject, { projectDatePicker } from './ui/createNewProject'
 const dates = [
   new Date(1995, 6, 2),
   new Date(1987, 1, 11),

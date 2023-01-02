@@ -61,6 +61,10 @@ export default function createNewProject() {
   inputSection = document.createElement("div");
   inputSection.classList.add("inputSection");
   formSubsection.appendChild(inputSection);
+
+
+
+
   let startingDateLabel = document.createElement("label");
   startingDateLabel.classList.add("startingDateLabel");
   startingDateLabel.htmlFor = "startingDateLabel";
@@ -72,6 +76,16 @@ export default function createNewProject() {
   startingDateInput.id = "startingDateInput";
   inputSection.appendChild(startingDateInput);
 
+
+  inputSection = document.createElement("div");
+  inputSection.classList.add("inputSection");
+  formSubsection.appendChild(inputSection);
+
+  let endingDateLabel = document.createElement("label");
+  endingDateLabel.classList.add("endingDateLabel");
+  endingDateLabel.htmlFor = "endingDateLabel";
+  endingDateLabel.innerHTML = "Enter the ending date!";
+  inputSection.appendChild(endingDateLabel);
 
   let endingDateInput = document.createElement("input");
   endingDateInput.id = "endingDateInput";
@@ -100,9 +114,10 @@ export default function createNewProject() {
   return (modal);
 }
 
-function projectDatePicker(){
+function projectDatePicker() {
 
   const startPicker = datepicker('#startingDateInput', { id: 1 });
+  startPicker.setMin(new Date());
   const endPicker = datepicker('#endingDateInput', { id: 1 });
 }
-export {newStartDatePicker};
+export { projectDatePicker };
