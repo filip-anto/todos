@@ -25,6 +25,7 @@ document.getElementsByTagName("body")[0].appendChild(createNewProject());
 projectDatePicker();
 document.getElementsByClassName("createProjectButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "block");
 document.getElementsByClassName("closeButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "none");
+document.getElementsByClassName("submitButton")[0].addEventListener("click", () => alert("HEYYO!"));
 window.onclick = function (event) {
   if (event.target == document.getElementsByClassName("modal")[0]) {
     document.getElementsByClassName("modal")[0].style.display = "none"

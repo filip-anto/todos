@@ -60,14 +60,14 @@
 }
 
 .projectContainer {
-  padding:3rem;
+  padding: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:1rem;
+  gap: 1rem;
   color: #be95c4;
   justify-content: center;
   gap: 50px;
-  height:fit-content;
+  height: fit-content;
 }
 
 .card {
@@ -75,7 +75,7 @@
   border-style: solid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 5px;
   background-color: #f4ecf7;
 }
@@ -104,7 +104,7 @@
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 500;
-  margin-left:2rem;
+  margin-left: 2rem;
 }
 
 .sidebarNavigation li:hover {
@@ -114,17 +114,30 @@
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.newProjectForm {
+  text-align: center;
 }
 
 /* Modal Content */
@@ -151,21 +164,39 @@
   cursor: pointer;
 }
 
-legend{
-  font-size:1.6rem;
-  color:#888;
-  padding:1rem;
+legend {
+  font-size: 1.6rem;
+  color: #888;
+  padding: 1rem;
   text-align: center;
 }
-.newProjectForm div{
-font-size:1.2rem;
+
+.newProjectForm div {
+  font-size: 1.2rem;
 }
-.formSubsection{
-  display:grid;
+
+
+
+.formSubsection {
+  display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.inputSection{
-  display:flex;
-  padding:1rem;
+
+.inputSection {
+  display: flex;
+  padding: 1rem;
   flex-direction: column;
+}
+
+.submitButton {
+  background: #7c00ff;
+  border-style: none;
+  border-radius: 1rem;
+  padding: 0.2rem 0.5rem;
+  color: rgb(204, 204, 204);
+}
+.submitButton:hover{
+  cursor: grab;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
 }

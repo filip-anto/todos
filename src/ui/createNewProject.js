@@ -119,5 +119,11 @@ function projectDatePicker() {
   const startPicker = datepicker('#startingDateInput', { id: 1 });
   startPicker.setMin(new Date());
   const endPicker = datepicker('#endingDateInput', { id: 1 });
+  let submitButton=document.createElement("input");
+  submitButton.classList.add("submitButton");
+  submitButton.type="button";
+  submitButton.value="Create Project";
+  document.getElementsByClassName("newProjectForm")[0].appendChild(submitButton);
+
 }
 export { projectDatePicker };
