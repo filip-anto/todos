@@ -2,7 +2,7 @@ import { compareAsc, format } from 'date-fns'
 import '../node_modules/js-datepicker/dist/datepicker.min.css';
 import './ui/style.css';
 import createNavBar from './ui/navBar';
-import addProject, { addSampleProjects, loadProjects } from './logic/projectManagement';
+import addProject, { addSampleProjects, loadProjects,createProjectButtonPressed } from './logic/projectManagement';
 import createProject from './ui/project';
 import createProjectContainer from './ui/projectContainer';
 import sidebarCreation from './ui/sidebar';
@@ -25,7 +25,7 @@ document.getElementsByTagName("body")[0].appendChild(createNewProject());
 projectDatePicker();
 document.getElementsByClassName("createProjectButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "block");
 document.getElementsByClassName("closeButton")[0].addEventListener("click", () => document.getElementsByClassName("modal")[0].style.display = "none");
-document.getElementsByClassName("submitButton")[0].addEventListener("click", () => alert("HEYYO!"));
+document.getElementsByClassName("submitButton")[0].addEventListener("click", () => createProjectButtonPressed());
 window.onclick = function (event) {
   if (event.target == document.getElementsByClassName("modal")[0]) {
     document.getElementsByClassName("modal")[0].style.display = "none"

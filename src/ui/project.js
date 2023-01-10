@@ -22,6 +22,16 @@ export default function createProject(title,description) {
     descriptionValue.classList.add("descriptionValue");
     descriptionValue.innerHTML=description;
     projectCard.appendChild(descriptionValue);
-    console.log(projectCard);
+
+    let taskLabel = document.createElement("div");
+    taskLabel.classList.add("taskLabel");
+    taskLabel.innerHTML = "Tasks:";
+    projectCard.appendChild(taskLabel);
+
+    let createTaskButton=document.createElement("div");
+    createTaskButton.classList.add("createTaskButton");
+    createTaskButton.innerHTML = "+";
+    projectCard.appendChild(createTaskButton);
+    createTaskButton.addEventListener("click",()=>alert("HELLO!"));
     return (projectCard);
 }

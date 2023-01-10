@@ -45,6 +45,7 @@ export default function createNewProject() {
 
 
   inputSection = document.createElement("div");
+  inputSection.setAttribute("required", "");
   inputSection.classList.add("inputSection");
   formSubsection.appendChild(inputSection);
   let descriptionLabel = document.createElement("label");
